@@ -24,7 +24,7 @@ module tt_um_ALU (
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
-    arithmetic_unit(
+    arithmetic_unit arithmetic_unit(
         .A[0](ui_in[0]),
         .A[1](ui_in[1]),
         .A[2](ui_in[2]),// 3-bit input A
