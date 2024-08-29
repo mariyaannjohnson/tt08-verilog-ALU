@@ -38,7 +38,7 @@ module tt_um_ALU (
         .result[2](uo_out[2]),
         .result[3](uo_out[3]),
         .result[4](uo_out[4]),
-        .result[5](uo_out[5]),// 6-bit result (to accommodate multiplication and division)
+        .result[5](uo_out[5])// 6-bit result (to accommodate multiplication and division)
 );
 
 endmodule
