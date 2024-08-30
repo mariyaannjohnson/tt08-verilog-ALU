@@ -26,8 +26,8 @@ module tt_um_ALU (
   wire _unused = &{ena, clk, rst_n, 1'b0};
     arithmetic_unit arithmetic_unit(
         .A(ui_in[2:0]),
-        .B(ui_in[2:0]),
-        .sel(ui_in[1:0]),
+        .B(ui_in[5:3]),
+        .sel(ui_in[7:6]),
         .result(uo_out[5:0])
 );
 
