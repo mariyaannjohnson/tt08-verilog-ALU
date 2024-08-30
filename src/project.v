@@ -25,20 +25,10 @@ module tt_um_ALU (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
     arithmetic_unit arithmetic_unit(
-        .A[0](ui_in[0]),
-        .A[1](ui_in[1]),
-        .A[2](ui_in[2]),// 3-bit input A
-        .B[0](ui_in[3]),
-        .B[1](ui_in[4]),
-        .B[2](ui_in[5]), // 3-bit input B
-        .sel[0](ui_in[6]),
-        .sel[1](ui_in[7]),// 2-bit select signal
-        .result[0](uo_out[0]),
-        .result[1](uo_out[1]),
-        .result[2](uo_out[2]),
-        .result[3](uo_out[3]),
-        .result[4](uo_out[4]),
-        .result[5](uo_out[5])// 6-bit result (to accommodate multiplication and division)
+        .A(ui_in[2:0]),
+        .B(ui_in[2:0]),
+        .sel(ui_in[1:0]),
+        .result(uo_out[5:0])
 );
 
 endmodule
